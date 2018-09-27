@@ -1,10 +1,8 @@
 
-let express = require('express'),
-	app = express();
-
-
-let port = process.env.PORT || 8080;
-let io = require('socket.io').listen(app.listen(port));
+const express = require('express'),
+      app = express(),
+      port = process.env.PORT || 8081,
+      io = require('socket.io').listen(app.listen(port));
 
 app.get('/viewer', (req, res) => {
 	res.sendFile(`${__dirname}/public/viewer.html`);
@@ -21,12 +19,9 @@ app.get('/css/print/pdf.css', (req, res) => {
 app.use(express.static(__dirname + '/public'));
 
 let secret = 'kittens';
-
-
 let presentation = io.on('connection', function (socket) {
 
 	socket.on('load', function(data){
-
 		socket.emit('access', {
 			access: (data.key === secret ? "granted" : "denied")
 		});
@@ -35,9 +30,7 @@ let presentation = io.on('connection', function (socket) {
 
 
 	socket.on('slide-changed', function(data){
-
 		if(data.key === secret) {
-
 			presentation.emit('navigate', {
 				hash: data.hash
 			});

@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-
 	<meta charset="utf-8">
-
 	<title>Admin Prez</title>
-
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
 	<link type="text/css" rel="stylesheet" href="assets/css/styles.css" />
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
 	<link rel="stylesheet" href="assets/revealjs/css/reveal.css">
 	<link rel="stylesheet" href="assets/revealjs/css/theme/black.css" id="theme">
-
 </head>
 
 <body>
 	<script>var sudo=true;</script>
-
+<span id="prez-root">
+	<!-- Prez Starts here, ANYTHING should be here unless you know what your doing-->
+	<!-- You got to copy and paste your CODE to ONLY viewer.js. "this is really getto", well yes
+	but for the sake of simplicity and also the fact that we aren't using JSX for awesome linting and debugging, shhhhh-->
 	<form class="login">
 		<span>Whats the Password (kittens)</span>
 		<input type="text" placeholder="Please enter your secret key!"/>
@@ -47,22 +42,14 @@
 			</section>
 		</div>
 	</div>
-
-
-	<!-- Including the JS libraries that we use -->
+</span>
 	<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-
-	<!-- Reveal.js is for presentations -->
 	<script src="assets/revealjs/lib/js/head.min.js"></script>
 	<script src="assets/revealjs/js/reveal.js"></script>
-
-	<!-- Socket.io library -->
 	<script src="/socket.io/socket.io.js"></script>
-
-	<!-- Main JavaScript file -->
 	<script src="assets/js/script.js"></script>
 <script>
-		var link = document.createElement( 'link' );
+	var link = document.createElement( 'link' );
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
 	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';

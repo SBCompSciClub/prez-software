@@ -1,7 +1,7 @@
 {
-  "name": "tutorialzine-remote-controller",
+  "name": "prez-software",
   "version": "1.0.0",
-  "description": "Using your smartphone as a remote control for reveal.js",
+  "description": "A prez software made of the SBHS compsci club",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,10 +15,10 @@
     "presentation",
     "tutorial"
   ],
-  "author": "Tutorialzine",
+  "author": "Sethu Senthil",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.11.0",
-    "socket.io": "^1.3.2"
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
   }
 }
