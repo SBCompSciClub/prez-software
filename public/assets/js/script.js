@@ -44,34 +44,29 @@ $(function() {
 					return;
 				} else if(sudo){
 					let hash = window.location.hash;
-
-					socket.emit('slide-changed', {
-						hash: hash,
-						key: key
-					});
+					//changesslide to current every one sec
+					setInterval(function(){
+						socket.emit('slide-changed', {
+							hash: hash,
+							key: key
+						});
+					},1000)
 				}
 			});
 
 			socket.on('navigate', function(data){
-
 				window.location.hash = data.hash;
-
 				ignore = true;
-
 				setInterval(function () {
 					ignore = false;
 				},100);
-
 			});
 
 		}
 		else {
 
 			clearTimeout(animationTimeout);
-
-
 			secretTextBox.addClass('denied animation');
-
 			animationTimeout = setTimeout(function(){
 				secretTextBox.removeClass('animation');
 			}, 1000);
