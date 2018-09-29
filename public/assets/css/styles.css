@@ -187,3 +187,6 @@ form.login input[type=submit] {
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
+.black-txt{
+	color:black !important;
+}
