@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Admin Controler</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<link type="text/css" rel="stylesheet" href="../../assets/css/styles.css" />
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../assets/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="../../assets/revealjs/css/theme/black.css" id="theme">
+</head>
+<script>
+        const sudo=true;
+        </script>
+<style>
+    .reveal{
+        display: none !important;
+    }
+    button {
+      height: 100%;
+      width:40%;
+    }
+</style>
+<body>
+        <span id="prez-root">
+                <!-- Prez Starts here, ANYTHING should be here unless you know what your doing-->
+                <!-- You got to copy and paste your CODE to ONLY viewer.js. "this is really getto", well yes
+                but for the sake of simplicity and also the fact that we aren't using JSX for awesome linting and debugging, shhhhh-->
+                <form class="login">
+                    <span>Whats the Password (javascript)</span>
+                    <input type="password" placeholder="Please enter your secret key!"/>
+                    <input type="submit" value="➡" />
+                </form>
+
+                <div class="reveal blurred">
+                    <div class="slides">
+                        <section data-background="">
+                            <h1>Welcome to the club computer science club <span id="year"></span></h1>
+                            <script>let currentYear = new Date().getFullYear(); document.getElementById('year').innerText = `${currentYear}-${currentYear + 1}`</script>
+                        </section>
+                            <section data-background="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-true-blue-solid-color-background.jpg">
+                              <h1>!IMPORTANT LINKS</h1>
+                                <p>Remind: Text 81010 @sbcompsci
+                                <br><br>
+                                Contact us: <a class="email">sbcompsciclub@gmail.com</a>
+                                <br><br>
+                                Visit our site for more info: <a class="link">sbcompsciclub.github.io</a></p>
+                            </section>
+                            <section data-background="https://sironatherapeutichorsemanship.files.wordpress.com/2017/09/plain-green-wallpaper.jpg?w=730">
+                                <h1>What is web developement?</h1>
+                                <p>
+                                    Programming which consists of developing apps for the web such as websites, PWA (progressive web apps) and games using the
+                                    web languages: HTML, CSS & JS.
+                                </p>
+                            </section>
+                            <section data-background="https://images.unsplash.com/photo-1505238680356-667803448bb6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d39fe8df8ff9407562e2f89aec3c1318&auto=format&fit=crop&w=1500&q=80">
+                                <h1>What is HTML?</h1>
+                                <ul>
+                                    <style>
+                                        .htmlc{
+                                            color:red;
+                                            text-decoration: underline;
+                                        }
+                                    </style>
+                                    <li class="fragment fade-up" data-fragment-index="1">Stands for - <span class="htmlc">H</span>yper <span class="htmlc">T</span>ext Markup <span class="htmlc">L</span>anguage</li>
+                                    <li class="fragment fade-up" data-fragment-index="2">Used to create web pages</li>
+                                    <li class="fragment fade-up" data-fragment-index="3">Primaraly used to create Static Content</li>
+                                    <li class="fragment fade-up" data-fragment-index="4">Styling is done using CSS, which we will talk about later</li>
+                                </ul>
+                            </section>
+                            <section data-background="https://images.unsplash.com/photo-1531265726475-52ad60219627?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdf4bb37039e0671779b45f60c335987&auto=format&fit=crop&w=1536&q=80">
+                               <h1>Demos</h1>
+                               <p><a class="link">tinyurl.com/ComicDemoNemo</a></p>
+                               <p><a class="link">tinyurl.com/aboutMeDemo</a></p>
+                            </section>
+                            <section data-background="https://images.unsplash.com/photo-1531265726475-52ad60219627?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdf4bb37039e0671779b45f60c335987&auto=format&fit=crop&w=1536&q=80">
+                                <h1>More about HTML</h1>
+                                <li class="fragment fade-up" data-fragment-index="1">HTML is dumb. It has no logic.</li>
+                                <!-- Image of logic the rapper-->
+                                <span class="fragment fade-up" data-fragment-index="2"><img class="fragment fade-out" data-fragment-index="3" src="https://i.pinimg.com/originals/fb/d7/8e/fbd78e83aea96ce9fad83d89f9487512.jpg" height="30%" width="30%"></span>
+                             </section>
+                             <section data-background="https://images.unsplash.com/photo-1531265726475-52ad60219627?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdf4bb37039e0671779b45f60c335987&auto=format&fit=crop&w=1536&q=80">
+                                <li class="fragment fade-up" data-fragment-index="1">HTML is made up of 'tags'</li>
+                                <li class="fragment fade-up" data-fragment-index="2">An opening tag looks like
+
+                                    <pre><code data-trim data-noescape>
+                                            &lt;tagname&gt;
+                                                </code></pre>
+                                            </li>
+                                <li class="fragment fade-up" data-fragment-index="2">While a closing tag looks like
+
+                                                    <pre><code data-trim data-noescape>
+                                                            &lt;/tagname&gt;
+                                                                </code></pre>
+                                                            </li>
+                                                    <li class="fragment fade-up" data-fragment-index="2">Put them together:
+                                                    <pre><code data-trim>
+                                                            <tagname></tagname>
+                                                                </code></pre>
+                                                            </li>
+                                <li class="fragment fade-up" ata-fragment-index="3">Most opening tags are always followed by a closing tag</li>
+                             </section>
+                             <section data-background="https://images.unsplash.com/photo-1511842745775-b366af36db2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e282288c8f4b6153340a36e27bdb7c24&auto=format&fit=crop&w=1500&q=80">
+                                <h1 class="black-txt">A simple HTML boilerplate</h1>
+                                <pre><code>
+                                        &lt;html&gt;
+                                          &lt;head&gt;
+                                            &lt;title&gt; &lt;/title&gt;
+                                            &lt;/head&gt;
+                                          &lt;body&gt;
+                                          &lt;/body&gt;
+                                        &lt;/html&gt;
+                                            </code></pre>
+                                        </li>
+                             </section>
+                             <section data-background="https://images.unsplash.com/photo-1511842745775-b366af36db2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e282288c8f4b6153340a36e27bdb7c24&auto=format&fit=crop&w=1500&q=80">
+                                <h1 class="black-txt">Headings and Paragraphs</h1>
+                                Heading: &lt;h1&gt;
+                                <br>
+                                Paragraph: &lt;p&gt;
+                                <br>
+                                <script async src="//jsfiddle.net/sbComputerScienceClub/67y9ntaj/embed/html,result/"></script>
+                             </section>
+                             <section data-background="https://images.unsplash.com/photo-1531817251186-0238ce693579?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5995735b4d604c4477d554d27893a636&auto=format&fit=crop&w=1500&q=80">
+                                <h1>Tags within Tags</h1>
+                                <br>
+                                <ul>
+                                    <li> Correct Embedding -> <span style="color:green">&lt;h1&gt;&lt;b&gt; Hello &lt;/b&gt; &lt;/h1&gt;</span></li>
+                                    <li>Close the innermost tag first, then the outermost.</li>
+                                    <li> Incorrect Embedding -> <span style="color:red">&lt;h1&gt; &lt;b&gt; Hello &lt;/h1&gt; &lt;/b&gt;</span></li>
+                                </ul>
+                                <br>
+                             </section>
+                             <section data-background="https://images.unsplash.com/photo-1531817251186-0238ce693579?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5995735b4d604c4477d554d27893a636&auto=format&fit=crop&w=1500&q=80">
+                                <h1>Images in HTML</h1>
+                                <br>
+                                <ul>
+                                    <li>&lt;img src = &quot;url&quot; width = &quot;width in px or % &quot; height = &quot;height in px or %&quot;&gt;</li>
+                                </ul>
+                                <script async src="//jsfiddle.net/sbComputerScienceClub/Latpru2v/embed/html,result/"></script>
+                                <br>
+                             </section>
+                             <section data-background="../../assets/img/4.jpg">
+                                <h1>Coloring for text</h1>
+                                <br>
+                                <ul>
+                                    Color can be defined using the styles attribute for any tag by adding some simple "inline css".
+                                    <li>
+                                            <pre><code data-trim data-noescape>
+                                                    &lt;h1 style=&quot;color:blue;&quot;&gt;&lt;/h1&gt;
+                                                        </code></pre>
+                                    </li>
+                                    <li>Predefined colors: style="blue;"</li>
+                                    <li>Hexadecimal colors: style="#000000;"</li>
+                                    <li>rgb colors: style = “color: rgb(r value, g value, b value);”</li>
+                                    <li>Add colors to this HTML page below</li>
+                                    <script async src="//jsfiddle.net/sbComputerScienceClub/Latpru2v/embed/html,result/"></script>
+                                </ul>
+                             </section>
+                             <section data-background="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bdb6cf2659a6cc7dc29113c6ae4a5279&auto=format&fit=crop&w=1504&q=80">
+                                <h1>Great tools to get colors</h1>
+                                <br>
+                                <ul>
+                                    <li>www.color-hex.com/</li>
+                                    <li>brandcolors.net/</li>
+                                    <li><a target="_blank" href="https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg?hl=en">Or try this Chrome extention</a></li>
+                                </ul>
+                             </section>
+                             <section data-background="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bdb6cf2659a6cc7dc29113c6ae4a5279&auto=format&fit=crop&w=1504&q=80">
+                <h1>Insert Rick Roll Here</h1>
+                             </section>
+                    </div>
+                </div>
+            </span>
+
+        <button onclick="Reveal.next();" style="float:right;">Next</button>
+        <button onclick="Reveal.nextFragment();" style="float:left;">Back</button>
+
+        <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="../../assets/revealjs/lib/js/head.min.js"></script>
+        <script src="../../assets/revealjs/js/reveal.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="../../assets/js/script.js"></script>
+
+</body>
+</html>

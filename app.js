@@ -4,6 +4,7 @@ const express = require('express'),
       port = process.env.PORT || 8081,
 	  io = require('socket.io').listen(app.listen(port));
 
+	  //advanced section app links
 app.get('/adv/controler/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/advanced/day${req.params.dynamicroute}/controls.html`);
 });
@@ -13,6 +14,8 @@ app.get('/adv/:dynamicroute', function(req,res) {
 app.get('/adv/sudo/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/advanced/day${req.params.dynamicroute}/index.html`);
 });
+
+	  //beginners section app links
 app.get('/beg/controler/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/beginners/day${req.params.dynamicroute}/controls.html`);
 });
@@ -22,6 +25,17 @@ app.get('/beg/:dynamicroute', function(req,res) {
 app.get('/beg/sudo/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/beginners/day${req.params.dynamicroute}/index.html`);
 });
+	//DAY 1 section app links (first)
+    app.get('/first/controler/:dynamicroute', function(req,res) {
+		res.sendFile(`${__dirname}/public/slides/day1/controls.html`);
+	});
+	app.get('/first/:dynamicroute', function(req,res) {
+		res.sendFile(`${__dirname}/public/slides/day1/viewer.html`);
+	});
+	app.get('/first/sudo/:dynamicroute', function(req,res) {
+		res.sendFile(`${__dirname}/public/slides/beginners/day1/index.html`);
+	});
+
 
 
 //path temp fixes
