@@ -26,14 +26,14 @@ app.get('/beg/sudo/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/beginners/day${req.params.dynamicroute}/index.html`);
 });
 	//DAY 1 section app links (first)
-    app.get('/first/controler/:dynamicroute', function(req,res) {
-		res.sendFile(`${__dirname}/public/slides/day1/controls.html`);
+    app.get('/first/controler/', function(req,res) {
+		res.sendFile(`${__dirname}/public/slides/first/controls.html`);
 	});
-	app.get('/first/:dynamicroute', function(req,res) {
-		res.sendFile(`${__dirname}/public/slides/day1/viewer.html`);
+	app.get('/first/', function(req,res) {
+		res.sendFile(`${__dirname}/public/slides/first/viewer.html`);
 	});
-	app.get('/first/sudo/:dynamicroute', function(req,res) {
-		res.sendFile(`${__dirname}/public/slides/beginners/day1/index.html`);
+	app.get('/first/sudo/', function(req,res) {
+		res.sendFile(`${__dirname}/public/slides/first/index.html`);
 	});
 
 
