@@ -1,1 +1,16 @@
-Hi there
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSC Admin</title>
+</head>
+<body>
+  Loading<span id="dots"></span>
+  <script>
+      window.setInterval(function(){
+        document.getElementById('dots').innerHTML = document.getElementById('dots').innerHTML + '.';
+}, 1000);
+  </script>
+</body>
+</html>

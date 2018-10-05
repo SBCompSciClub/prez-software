@@ -5,7 +5,7 @@ const express = require('express'),
 	  io = require('socket.io').listen(app.listen(port));
 
 	  //advanced section app links
-app.get('/adv/controler/:dynamicroute', function(req,res) {
+app.get('/adv/controller/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/advanced/day${req.params.dynamicroute}/controls.html`);
 });
 app.get('/adv/:dynamicroute', function(req,res) {
@@ -16,7 +16,7 @@ app.get('/adv/sudo/:dynamicroute', function(req,res) {
 });
 
 	  //beginners section app links
-app.get('/beg/controler/:dynamicroute', function(req,res) {
+app.get('/beg/controller/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/beginners/day${req.params.dynamicroute}/controls.html`);
 });
 app.get('/beg/:dynamicroute', function(req,res) {
@@ -26,7 +26,7 @@ app.get('/beg/sudo/:dynamicroute', function(req,res) {
 	res.sendFile(`${__dirname}/public/slides/beginners/day${req.params.dynamicroute}/index.html`);
 });
 	//DAY 1 section app links (first)
-    app.get('/first/controler/', function(req,res) {
+    app.get('/first/controller/', function(req,res) {
 		res.sendFile(`${__dirname}/public/slides/first/controls.html`);
 	});
 	app.get('/first/', function(req,res) {
@@ -60,7 +60,15 @@ let presentation = io.on('connection', function (socket) {
 	});
 
 
-	socket.on('slide-changed', function(data){
+	socket.on('slide-changed-big', function(data){
+		if(data.key === secret) {
+			presentation.emit('navigate', {
+				hash: data.hash
+			});
+		}
+
+	});
+	socket.on('slide-changed-adv', function(data){
 		if(data.key === secret) {
 			presentation.emit('navigate', {
 				hash: data.hash

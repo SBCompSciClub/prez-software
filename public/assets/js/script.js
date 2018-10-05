@@ -1,5 +1,8 @@
 
 $(function() {
+  if (controller === true) {
+    document.getElementById('remote').innerHTML = ' <style> .reveal{ display: none !important; } button { height: 100%; width:40%; } </style> <button onclick="Reveal.nextFragment();" style="float:right;">Next</button> <button onclick="Reveal.prev();" style="float:left;">Back</button>';
+     }
 	for (let i = 0; i < document.getElementsByClassName('link'); i++) {
 		document.getElementsByClassName('link')[i].addEventListener('click', function(){
 			window.open('https://'+this.innerText);
@@ -56,9 +59,15 @@ $(function() {
       $(window).on("hashchange", function() {
         if (ignore) {
           return;
-        } else if (sudo) {
+        } else if (sudo && radio === 'beginner') {
           let hash = window.location.hash;
-          socket.emit("slide-changed", {
+          socket.emit("slide-changed-big", {
+            hash: hash,
+            key: key
+          });
+        }else if (sudo && radio === 'advanced') {
+          let hash = window.location.hash;
+          socket.emit("slide-changed-adv", {
             hash: hash,
             key: key
           });
