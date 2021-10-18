@@ -8,9 +8,12 @@
 <body>
   Loading<span id="dots"></span>
   <script>
-      window.setInterval(function(){
-        document.getElementById('dots').innerHTML = document.getElementById('dots').innerHTML + '.';
-}, 1000);
+    window.setInterval(()=>{
+        if(document.getElementById('dots').innerText.length>=3)
+            document.getElementById('dots').innerText = ""
+        else
+            document.getElementById('dots').innerText += '.';
+    }, 1000);
   </script>
 </body>
 </html>
